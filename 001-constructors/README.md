@@ -152,4 +152,4 @@ let things = [1, 2, 3].map(Thing); // works
 
 ## Examples / Instructions
 
-You can find examples of different class implementations and test cases in the attached [GitHub repo]https://github.com/somesocks/misc-js/tree/master/001-constructors
+You can find examples of different class implementations and test cases in the attached [GitHub repo](https://github.com/somesocks/misc-js/tree/master/001-constructors)
