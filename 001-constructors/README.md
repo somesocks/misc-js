@@ -1,7 +1,7 @@
 
 # A little bit of Javascript - constructors
 
-Constructors in JS are an interesting feature.  Pre-ES6 constructor functions are widely regarded as confusing and frustrating, but the new ES6 class syntax creates new problems without effectively solving the old problem.
+Constructors in JS are an interesting feature.  Pre-ES6 constructor functions are widely regarded as confusing and frustrating, but the new ES6 class syntax creates new restrictions without effectively solving some of the original issues.
 
 
 ## What does a constructor do?
