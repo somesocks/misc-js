@@ -1,20 +1,38 @@
 
-function ES5Class () { }
-
-function ES5ClassWithReturn () {
-	return this;
+/* this is a normal ES5 constructor function */
+function ES5Class (a, b, c) {
+	this.a = a;
+	this.b = b;
+	this.c = c;
 }
 
 class ES6Class {
 
-	// eslint-disable-next-line no-useless-constructor
-	constructor () {
-		/**/
+	/* this is a normal ES6 constructor */
+	constructor (a, b, c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 }
 
-function CompatClass () {
-	const self = this instanceof CompatClass ? this : Object.create(CompatClass.prototype);
+
+/* this is an ES5 constructor, with an explicit return */
+function ES5ClassWithReturn (a, b, c) {
+	this.a = a;
+	this.b = b;
+	this.c = c;
+
+	return this;
+}
+
+/* this is an ES5 constructor, that will work with or without new, and recycle "this" */
+function GuardedES5Class (a, b, c) {
+	const self = this instanceof GuardedES5Class ? this : Object.create(GuardedES5Class.prototype);
+
+	self.a = a;
+	self.b = b;
+	self.c = c;
 
 	return self;
 }
@@ -23,5 +41,5 @@ module.exports = {
 	ES5Class,
 	ES5ClassWithReturn,
 	ES6Class,
-	CompatClass,
+	GuardedES5Class,
 };
